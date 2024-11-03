@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Ely!</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0e68c;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        .balloon {
+            position: absolute;
+            width: 100px;
+            height: 150px;
+            background-color: #1cbdb5;
+            border-radius: 50% 50% 0 0;
+            bottom: -150px;
+            animation: rise 4s ease-in forwards;
+        }
+        .balloon:before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 50px;
+            background-color: #ad6c0b;
+            left: 45px;
+            bottom: -50px;
+        }
+        @keyframes rise {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-600px);
+            }
+        }
+        h1 {
+            position: relative;
+            font-size: 4em;
+            color: #8a580d;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: bounce 1s infinite alternate;
+        }
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+        p{
+            font-size: 1.5em;
+            color: #8a580d;
+            margin:5px 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: bounce 1s infinite alternate;
+        }
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+        .border{
+            border: 2px solid #814b0c;
+            padding: 20px;
+            margin: 20px;
+            width: 600px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="border">
+    <h1>Happy Birthday Ely!</h1>
+    <p>This is just a simple letter or greeting, and I just wanted to say that despite all the challenges that come to your life, you always go through with them, and that's why I'm proud of you! Just enjoy your day and galingan mo pa palagi, palagi din akong nakasuporta at proud sayo Ely.  </p>
+    <div class="balloon"></div>
+    <script>
+        // Create multiple balloons
+        for (let i = 0; i < 5; i++) {
+            const balloon = document.createElement('div');
+            balloon.className = 'balloon';
+            balloon.style.left = ${Math.random() * 100}vw;
+            balloon.style.animationDelay = ${Math.random() * 3}s;
+            document.body.appendChild(balloon);
+        }
+    </script>
+    </div>
+</body>
+</html>
